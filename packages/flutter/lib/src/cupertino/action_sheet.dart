@@ -208,15 +208,15 @@ class CupertinoActionSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Widget> children = <Widget>[
       Flexible(child: ClipRRect(
-          borderRadius: BorderRadius.circular(12.0),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: _kBlurAmount, sigmaY: _kBlurAmount),
-            child: _CupertinoAlertRenderWidget(
-              contentSection: Builder(builder: _buildContent),
-              actionsSection: _buildActions(),
-            ),
+        borderRadius: BorderRadius.circular(12.0),
+        child: Container(
+          color: Color(0xFFF9F9F9),
+          child: _CupertinoAlertRenderWidget(
+            contentSection: Builder(builder: _buildContent),
+            actionsSection: _buildActions(),
           ),
         ),
+      ),
       ),
       if (cancelButton != null) _buildCancelButton(),
     ];
