@@ -357,7 +357,7 @@ class CupertinoPopupSurface extends StatelessWidget {
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: _kBlurAmount, sigmaY: _kBlurAmount),
         child: Container(
-          color: isSurfacePainted ? CupertinoDynamicColor.resolve(_kDialogColor, context) : null,
+          color: Color(0xFFF9F9F9),
           child: child,
         ),
       ),
